@@ -3,7 +3,12 @@ function Holder() {
 };
 
 Holder.prototype.acceptBike = function(bike){
-	this.bikeCount.push(bike)
+	if(this.bikeCount.length < 5){
+		this.bikeCount.push(bike);
+	}
+	else {
+		return "Already Full";
+	};
 };
 
 
